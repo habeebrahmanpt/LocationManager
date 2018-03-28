@@ -2,9 +2,11 @@ package com.yayandroid.locationmanager.sample.activity;
 
 import android.Manifest;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
