@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.yayandroid.locationmanager.base.LocationBaseService;
 import com.yayandroid.locationmanager.configuration.Configurations;
@@ -22,6 +23,11 @@ public class SampleService extends LocationBaseService {
     public static final String EXTRA_PROCESS_TYPE = "ExtraProcessTypeField";
 
     private boolean isLocationRequested = false;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
 
     @Nullable
     @Override
@@ -50,6 +56,7 @@ public class SampleService extends LocationBaseService {
 
     @Override
     public void onLocationChanged(Location location) {
+        Log.e("onLocationChanged","value  :"+location.getLatitude()+","+location.getLongitude());
         Intent intent = new Intent(ACTION_LOCATION_CHANGED);
         intent.putExtra(EXTRA_LOCATION, location);
         sendBroadcast(intent);

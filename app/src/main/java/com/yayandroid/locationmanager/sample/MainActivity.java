@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.yayandroid.locationmanager.sample.activity.SampleActivity;
+import com.yayandroid.locationmanager.sample.activity.SampleMapActivity;
 import com.yayandroid.locationmanager.sample.fragment.SampleFragmentActivity;
 import com.yayandroid.locationmanager.sample.service.SampleServiceActivity;
 
@@ -28,5 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void inServiceClick(View view) {
         startActivity(new Intent(this, SampleServiceActivity.class));
+    }
+    public void inMapClick(View view) {
+        startActivity(new Intent(this, SampleMapActivity.class));
     }
 }

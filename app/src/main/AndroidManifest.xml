@@ -1,5 +1,6 @@
-<manifest package="com.yayandroid.locationmanager.sample"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yayandroid.locationmanager.sample">
 
     <!-- Required to check whether user has network connection or not -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,6 +17,11 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDZ3EhXNkISHFInEo4QdRtFvtL97VDZKXI" />
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,12 +29,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.SampleActivity" />
+
         <activity android:name=".fragment.SampleFragmentActivity" />
+
         <activity android:name=".service.SampleServiceActivity" />
 
+        <activity android:name=".activity.SampleMapActivity"/>
+
         <service android:name=".service.SampleService" />
+
+        <service
+            android:name=".service.LocationUpdateService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
 
     </application>
 
