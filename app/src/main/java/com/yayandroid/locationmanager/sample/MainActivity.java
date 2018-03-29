@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.yayandroid.locationmanager.sample.activity.FusedLocationWithSettingsDialog;
 import com.yayandroid.locationmanager.sample.activity.KalManMapActivity;
 import com.yayandroid.locationmanager.sample.activity.SampleActivity;
 import com.yayandroid.locationmanager.sample.activity.SampleMapActivity;
@@ -37,5 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void inKalMapClick(View view) {
         startActivity(new Intent(this, KalManMapActivity.class));
+    }
+    public void inFusedLocationClick(View view) {
+        startActivity(new Intent(this, FusedLocationWithSettingsDialog.class));
     }
 }

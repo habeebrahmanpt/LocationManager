@@ -204,7 +204,7 @@ public class KalManMapActivity extends AppCompatActivity implements OnMapReadyCa
 
             mLastLocation.set(location);
 
-            addKalManOnMap(new LatLng(location.getLatitude(),location.getLongitude()));
+            addLatinOnMap(new LatLng(location.getLatitude(),location.getLongitude()));
 
                 kalmanLatLong.process(
                         location.getLatitude(),

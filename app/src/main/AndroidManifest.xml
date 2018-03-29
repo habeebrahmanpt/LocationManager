@@ -38,6 +38,8 @@
         <activity android:name=".activity.SampleMapActivity"/>
         <activity android:name=".activity.KalManMapActivity"/>
 
+        <activity android:name=".activity.FusedLocationWithSettingsDialog"/>
+
         <service android:name=".service.SampleService" />
 
         <!--<service-->
